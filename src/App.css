@@ -1494,3 +1494,68 @@ body::after {
     font-size: 28px;
   }
 }
+
+/* MENU MOBILE SIMPLES - SEM HAMBURGUER */
+
+.menu-btn {
+  display: none !important;
+}
+
+@media (max-width: 760px) {
+  .header {
+    position: relative !important;
+    display: flex !important;
+    flex-direction: column !important;
+    align-items: center !important;
+    gap: 14px !important;
+    padding: 18px 16px !important;
+  }
+
+  .logo {
+    justify-content: center !important;
+    width: 100% !important;
+  }
+
+  .nav {
+    display: flex !important;
+    width: 100% !important;
+    flex-direction: row !important;
+    justify-content: center !important;
+    flex-wrap: wrap !important;
+    gap: 8px !important;
+    padding: 0 !important;
+    margin: 0 !important;
+    background: transparent !important;
+    box-shadow: none !important;
+  }
+
+  .nav a {
+    display: inline-flex !important;
+    align-items: center !important;
+    justify-content: center !important;
+    padding: 10px 14px !important;
+    border-radius: 999px !important;
+    background: rgba(255, 255, 255, 0.75) !important;
+    color: #334d37 !important;
+    font-size: 13px !important;
+    font-weight: 800 !important;
+    min-width: auto !important;
+  }
+
+  .theme-btn {
+    position: fixed !important;
+    right: 16px !important;
+    bottom: 78px !important;
+    z-index: 2500 !important;
+  }
+
+  html,
+  body,
+  #root,
+  .site {
+    height: auto !important;
+    min-height: 100% !important;
+    overflow-x: hidden !important;
+    overflow-y: auto !important;
+  }
+}

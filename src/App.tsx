@@ -72,15 +72,12 @@ useEffect(() => {
           </div>
         </a>
 
-<button className="menu-btn" onClick={() => setMenuAberto(!menuAberto)}>
-  ☰
-</button>
 
 <button className="theme-btn" onClick={() => setModoEscuro(!modoEscuro)}>
   {modoEscuro ? "☀️" : "🌙"}
 </button>
 
-<nav className={menuAberto ? "nav aberto" : "nav"}>
+<nav className="nav">
   <a onClick={() => setMenuAberto(false)} href="#inicio">Início</a>
   <a onClick={() => setMenuAberto(false)} href="#produtos">Produtos</a>
   <a onClick={() => setMenuAberto(false)} href="#contato">Contato</a>
