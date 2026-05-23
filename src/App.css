@@ -12,7 +12,8 @@ html {
 
 body {
   background:
-    radial-gradient(circle at top left, #dfeada 0, transparent 35%),
+    radial-gradient(circle at top left, rgba(120,148,111,0.18), transparent 28%),
+    radial-gradient(circle at top right, rgba(184,145,75,0.12), transparent 22%),
     linear-gradient(135deg, #f8f5ec 0%, #edf2e7 100%);
   color: #263528;
   font-family: "Inter", Arial, sans-serif;
@@ -58,15 +59,19 @@ a {
 }
 
 .logo-icon {
-  width: 52px;
-  height: 52px;
-  border-radius: 18px;
+  width: 58px;
+  height: 58px;
+  border-radius: 20px;
   display: grid;
   place-items: center;
-  background: linear-gradient(135deg, #6f8c68, #354d39);
+  background:
+    linear-gradient(135deg, #7b9b74, #405c43);
   color: white;
-  font-weight: 800;
+  font-weight: 900;
   letter-spacing: 1px;
+  box-shadow:
+    0 18px 35px rgba(64, 92, 67, 0.28),
+    inset 0 1px 1px rgba(255,255,255,0.3);
 }
 
 .header h1 {
@@ -127,11 +132,12 @@ a {
   margin-bottom: 24px;
 }
 
-.hero h2,
-.titulo h2,
-.sobre h2,
-.contato h2 {
-  font-family: "Playfair Display", serif;
+.hero h2 {
+  font-size: clamp(52px, 7vw, 92px);
+  line-height: 0.95;
+  max-width: 720px;
+  color: #253527;
+  letter-spacing: -2px;
 }
 
 .hero h2 {
@@ -1268,5 +1274,151 @@ body::after {
 
   100% {
     background-position: 0% 50%;
+  }
+}
+
+/* MOBILE PREMIUM */
+
+@media (max-width: 760px) {
+  .hero {
+    padding-top: 40px;
+    gap: 36px;
+  }
+
+  .hero h2 {
+    font-size: 42px;
+    line-height: 1.05;
+    text-align: center;
+  }
+
+  .hero p {
+    text-align: center;
+    font-size: 17px;
+  }
+
+  .hero-texto {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .hero-card {
+    padding: 12px;
+    border-radius: 28px;
+  }
+
+  .hero-card img {
+    height: 320px;
+    border-radius: 22px;
+  }
+
+  .hero-card-info {
+    left: 16px;
+    right: 16px;
+    bottom: 16px;
+    padding: 18px;
+    border-radius: 18px;
+  }
+
+  .hero-card-info h3 {
+    font-size: 22px;
+  }
+
+  .hero-numeros {
+    width: 100%;
+  }
+
+  .hero-numeros div {
+    text-align: center;
+  }
+
+  .titulo h2 {
+    font-size: 34px;
+  }
+
+  .card {
+    border-radius: 24px;
+  }
+
+  .card img {
+    height: 230px;
+  }
+
+  .card-conteudo {
+    padding: 20px;
+  }
+
+  .card h3 {
+    font-size: 24px;
+  }
+
+  .footer {
+    gap: 12px;
+  }
+
+  .whatsapp-float {
+    width: calc(100% - 32px);
+    text-align: center;
+    border-radius: 18px;
+  }
+}
+
+/* CORREÇÃO MOBILE - TRAVAMENTO/SCROLL */
+
+html,
+body,
+#root {
+  min-height: 100%;
+  overflow-x: hidden;
+}
+
+body {
+  overflow-y: auto;
+}
+
+.site {
+  min-height: 100vh;
+  position: relative;
+}
+
+@media (max-width: 760px) {
+  .header {
+    position: sticky;
+    top: 0;
+    display: flex;
+    flex-direction: column;
+    align-items: stretch;
+    gap: 12px;
+  }
+
+  .logo {
+    width: 100%;
+  }
+
+  .menu-btn {
+    position: absolute;
+    top: 20px;
+    right: 20px;
+  }
+
+  .nav {
+    max-height: 0;
+    overflow: hidden;
+    opacity: 0;
+    padding: 0;
+    margin-top: 0;
+    transition: 0.3s ease;
+  }
+
+  .nav.aberto {
+    max-height: 280px;
+    opacity: 1;
+    padding: 18px;
+    margin-top: 10px;
+  }
+
+  .hero {
+    min-height: auto;
+    padding-top: 55px;
   }
 }
