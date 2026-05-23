@@ -1655,3 +1655,71 @@ body::after {
     text-align: center !important;
   }
 }
+
+.confianca {
+  max-width: 1180px;
+  margin: auto;
+  padding: 90px 40px;
+}
+
+.confianca-card {
+  padding: 46px;
+  border-radius: 36px;
+  text-align: center;
+}
+
+.confianca-card span {
+  display: inline-block;
+  padding: 10px 18px;
+  border-radius: 999px;
+  background: #dfeada;
+  color: #536d50;
+  font-weight: 800;
+  font-size: 14px;
+  margin-bottom: 22px;
+}
+
+.confianca-card h2 {
+  font-family: "Playfair Display", serif;
+  font-size: clamp(34px, 4vw, 52px);
+  color: #263528;
+}
+
+.confianca-grid {
+  margin-top: 38px;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 22px;
+}
+
+.confianca-grid div {
+  background: rgba(255,255,255,0.55);
+  border-radius: 24px;
+  padding: 24px;
+}
+
+.confianca-grid strong {
+  display: block;
+  color: #334d37;
+  font-size: 18px;
+  margin-bottom: 10px;
+}
+
+.confianca-grid p {
+  color: #657263;
+  line-height: 1.6;
+}
+
+@media (max-width: 760px) {
+  .confianca {
+    padding: 70px 20px;
+  }
+
+  .confianca-card {
+    padding: 30px 22px;
+  }
+
+  .confianca-grid {
+    grid-template-columns: 1fr;
+  }
+}

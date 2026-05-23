@@ -179,6 +179,30 @@ href="https://wa.me/5541999999999?text=Ola%2C%20vim%20pelo%20site%20da%20Verde%2
           </div>
         </section>
 
+        <section className="confianca">
+  <div className="confianca-card glass">
+    <span>Por que confiar?</span>
+    <h2>Cuidado artesanal pensado para momentos especiais.</h2>
+
+    <div className="confianca-grid">
+      <div>
+        <strong>🌿 Produtos selecionados</strong>
+        <p>Itens pensados para proporcionar relaxamento e bem-estar.</p>
+      </div>
+
+      <div>
+        <strong>🎁 Ideal para presentear</strong>
+        <p>Uma opção delicada para quem gosta de autocuidado.</p>
+      </div>
+
+      <div>
+        <strong>💬 Atendimento direto</strong>
+        <p>Pedidos e dúvidas resolvidos de forma simples pelo WhatsApp.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
 <section className="faq reveal">
   <div className="titulo">
     <span>Dúvidas</span>
