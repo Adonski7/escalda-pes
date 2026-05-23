@@ -1597,3 +1597,61 @@ body::after {
     position: relative !important;
   }
 }
+
+/* CORREÇÃO DEFINITIVA SCROLL MOBILE */
+
+@media (max-width: 760px) {
+  * {
+    animation: none !important;
+    transition-duration: 0.15s !important;
+  }
+
+  html,
+  body,
+  #root,
+  .site {
+    width: 100% !important;
+    height: auto !important;
+    min-height: 100% !important;
+    overflow-x: hidden !important;
+    overflow-y: visible !important;
+    position: static !important;
+  }
+
+  body {
+    touch-action: pan-y !important;
+    -webkit-overflow-scrolling: touch !important;
+  }
+
+  .fundo-animado,
+  .site::before,
+  body::after {
+    display: none !important;
+  }
+
+  .header {
+    position: static !important;
+  }
+
+  .hero,
+  .secao,
+  .faq,
+  .contato,
+  .footer {
+    position: relative !important;
+    overflow: visible !important;
+  }
+
+  .hero-card {
+    transform: none !important;
+  }
+
+  .whatsapp-float,
+  .theme-btn {
+    position: static !important;
+    display: block !important;
+    width: calc(100% - 40px) !important;
+    margin: 20px auto !important;
+    text-align: center !important;
+  }
+}
