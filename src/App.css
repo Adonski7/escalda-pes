@@ -1559,3 +1559,41 @@ body::after {
     overflow-y: auto !important;
   }
 }
+
+/* FIX SCROLL MOBILE IOS */
+
+@media (max-width: 760px) {
+  .fundo-animado,
+  .site::before,
+  body::after {
+    display: none !important;
+    animation: none !important;
+  }
+
+  .hero-card {
+    animation: none !important;
+  }
+
+  .reveal {
+    opacity: 1 !important;
+    transform: none !important;
+    transition: none !important;
+  }
+
+  html,
+  body {
+    height: auto !important;
+    min-height: 100% !important;
+    overflow-y: auto !important;
+    -webkit-overflow-scrolling: touch !important;
+  }
+
+  .site {
+    overflow: visible !important;
+    min-height: 100vh !important;
+  }
+
+  .header {
+    position: relative !important;
+  }
+}
